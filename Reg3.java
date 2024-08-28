@@ -3,10 +3,13 @@ import java.util.Scanner;
 public class Reg3{
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
+        System.out.println("Enter a string: ");
         String pattern=sc.nextLine();
+
         String regex="^[^abcABC].*";
         Pattern p=Pattern.compile(regex);
         Matcher m=p.matcher(pattern);
+        
         if(m.matches())
             System.out.println("Valid");
         else
